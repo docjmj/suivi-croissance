@@ -115,13 +115,14 @@ if btn_valider:
 
       # Point fin et élégant (s=40)
       ax.scatter(
-          [age_ans],
-          [val_enfant],
-          color="#c0392b",
-          s=40,
-          zorder=5,
-          label=f"Mesure ({val_enfant})",
-      )
+    [age_ans],  # (ou age_mois pour le 0-3 ans)
+    [val_enfant],
+    color="#c0392b",
+    marker="x",  # Vous pouvez tester 'x' ou '+'
+    s=60,  # Taille de la croix (un peu plus grand qu'un rond pour bien la voir)
+    zorder=5,
+    label=f"Mesure ({val_enfant})",
+)
 
       ax.set_title(f"{titre} (0-18 ans) - {sexe}", fontsize=12, fontweight="bold")
       ax.set_xlabel("Âge (années)", fontsize=10)
